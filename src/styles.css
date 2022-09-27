@@ -1,6 +1,42 @@
-#content {
-    height: 100vh;
+:root {
+    --header: 100px;
+    --footer: 75px;
+    --body: calc(100vh - var(--header) - var(--footer))
 }
+
+body {
+    min-height: 100vh;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: var(--header) var(--body) var(--footer);
+    background-color: lightblue;
+}
+
+#body img {
+    max-height: var(--body);
+    max-width: 100%;
+}
+
+#body {
+    display: flex;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightpink;
+    min-height: var(--header);
+}
+
+#footer p {
+    background-color: lightgreen;
+    min-height: var(--footer);
+}
+
+
 
 img {
     height: 100vh;
