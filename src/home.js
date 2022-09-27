@@ -15,10 +15,13 @@ function homePage () {
     /* header */
     let tabs = document.createElement('ul');
     let homeTab = document.createElement('li');
+    homeTab.id = 'home-tab'
     homeTab.textContent = 'Home';
     let menuTab = document.createElement('li');
+    menuTab.id = 'menu-tab'
     menuTab.textContent = 'Menu';
     let contactTab = document.createElement('li');
+    contactTab.id = 'contact-tab';
     contactTab.textContent = 'Contact';
 
     header.appendChild(tabs);
@@ -36,7 +39,8 @@ function homePage () {
     welcomeMessage.textContent = "Welcome to the juiciest restaurant page you'll ever see";
 
     body.appendChild(restaurantImage);
-    body.appendChild(welcomeMessage);
+    body.append(welcomeMessage);
+   
     /* body */
 
     /* footer */
